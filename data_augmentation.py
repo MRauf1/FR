@@ -1,4 +1,5 @@
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
+import sys
 
 # Parameters/Options for data augmentation
 datagen = ImageDataGenerator(
@@ -11,14 +12,14 @@ datagen = ImageDataGenerator(
         fill_mode='nearest')
 
 # Retrieve the image
-image = load_img('train_images/arslan/index.jpg')
+image = load_img(sys.argv[2])
 X = img_to_array(image)
 X = X.reshape((1,) + X.shape)
 
 # Generate 50 new images and save them to the assigned directory
 i = 0
 for batch in datagen.flow(X, batch_size=1,
-                          save_to_dir='train_images/arslan', save_prefix='new', save_format='jpeg'):
+                          save_to_dir=sys.argv[1], save_prefix='new', save_format='jpeg'):
     i += 1
     if i > 50:
         break
