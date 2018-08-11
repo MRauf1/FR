@@ -1,6 +1,4 @@
 from argparse import ArgumentParser
-import imutils
-from imutils.video import VideoStream
 import face_recognition
 from sklearn import neighbors
 import pickle
