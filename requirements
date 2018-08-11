@@ -1,0 +1,18 @@
+face_recognition:
+    pip install face_recognition
+scikit-learn:
+    pip install scikit-learn
+opencv-contrib-python:
+    pip install opencv-contrib-python
+opencv-python:
+    pip install opencv-python
+tensorflow:
+    pip install tensorflow
+keras:
+    pip install keras
+Pillow:
+    pip install Pillow
+cmake:
+    sudo apt-get install cmake ???
+dlib:
+    pip install dlib
