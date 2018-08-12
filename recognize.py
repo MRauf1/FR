@@ -1,9 +1,10 @@
 from argparse import ArgumentParser
+import imutils
+from imutils.video import VideoStream
 import face_recognition
 from sklearn import neighbors
 import pickle
 import cv2
-import time
 
 # Command line arguments
 parser = ArgumentParser(description="Recognize Faces")
@@ -38,7 +39,7 @@ while(True):
     print("Started new frame")
 
     # ***For accessing the IP camera
-    #ret,img = cam.read()
+    #_, frame = camera.read()
 
     # Read each frame
     frame = video.read()
